@@ -5,6 +5,8 @@ import (
 	"database/sql"
 	"fmt"
 	"net/http"
+	"os"
+
 	//"strconv"
 	"time"
 
@@ -64,11 +66,11 @@ func defaultHandler(c echo.Context) error {
 }
 
 func main() {
-	//port := os.Getenv("PORT")
-	//
-	//if port == "" {
-	//	log.Fatal("$PORT must be set")
-	//}
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 
 	//tStr := os.Getenv("REPEAT")
 	//repeat, err := strconv.Atoi(tStr)
@@ -101,5 +103,5 @@ func main() {
 	//router.GET("/repeat", repeatHandler(repeat))
 	//router.GET("/db", dbFunc(db))
 	//router.Run(":" + port)
-	router.Logger.Fatal(router.Start(":8080"))
+	router.Logger.Fatal(router.Start(port))
 }
