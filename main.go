@@ -76,7 +76,7 @@ func main() {
 	if port == "" {
 		log.Fatal("$PORT must be set")
 	}
-
+	log.Print("PORT:", port)
 	//tStr := os.Getenv("REPEAT")
 	//repeat, err := strconv.Atoi(tStr)
 	//if err != nil {
