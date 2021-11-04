@@ -1,8 +1,8 @@
 module github.com/modigas/heroku-app
 
-// +heroku goVersion go1.17
+// +heroku goVersion go1.16.4
 
-go 1.17
+go 1.16
 
 require (
 	github.com/gin-gonic/gin v0.0.0-20150626140855-4cc2de6207f4
