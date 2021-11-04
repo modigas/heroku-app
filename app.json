@@ -2,11 +2,11 @@
   "name": "Start on Heroku: Go",
   "description": "Go Getting Started Example App",
   "keywords": [
-    "getting-started",
+    "heroku-app",
     "go",
     "sample",
     "example"
   ],
-  "website": "http://github.com/heroku/go-getting-started",
-  "repository": "http://github.com/heroku/go-getting-started"
+  "website": "https://github.com/modigas/heroku-app",
+  "repository": "https://github.com/modigas/heroku-app"
 }
