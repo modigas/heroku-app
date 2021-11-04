@@ -108,5 +108,5 @@ func main() {
 	//router.GET("/repeat", repeatHandler(repeat))
 	//router.GET("/db", dbFunc(db))
 	//router.Run(":" + port)
-	router.Logger.Fatal(router.Start(port))
+	router.Logger.Fatal(router.Start(":" + port))
 }
