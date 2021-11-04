@@ -62,7 +62,11 @@ func dbFunc(db *sql.DB) gin.HandlerFunc {
 }
 
 func defaultHandler(c echo.Context) error {
-	c.Response().Write([]byte("ZHOPA"))
+	log.Print(c)
+	_, err := c.Response().Write([]byte("ZHOPA"))
+	if err != nil {
+		return err
+	}
 	return nil
 }
 
