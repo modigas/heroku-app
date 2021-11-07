@@ -77,36 +77,12 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 	log.Print("PORT:", port)
-	//tStr := os.Getenv("REPEAT")
-	//repeat, err := strconv.Atoi(tStr)
-	//if err != nil {
-	//	log.Printf("Error converting $REPEAT to an int: %q - Using default\n", err)
-	//	repeat = 5
-	//}
-	//
-	//db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
-	//if err != nil {
-	//	log.Fatalf("Error opening database: %q", err)
-	//}
 
 	router := echo.New()
 
-	//router := gin.New()
-	//router.Use(gin.Logger())
-	//router.LoadHTMLGlob("templates/*.tmpl.html")
 	router.Static("/static", "static")
 
 	router.GET("/", defaultHandler)
-	//router.GET("/", func(c *gin.Context) {
-	//	c.HTML(http.StatusOK, "index.tmpl.html", nil)
-	//})
-	//
-	//router.GET("/mark", func(c *gin.Context) {
-	//	c.String(http.StatusOK, string(blackfriday.Run([]byte("**hi!**"))))
-	//})
-	//
-	//router.GET("/repeat", repeatHandler(repeat))
-	//router.GET("/db", dbFunc(db))
-	//router.Run(":" + port)
+
 	router.Logger.Fatal(router.Start(":" + port))
 }
